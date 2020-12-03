@@ -1,0 +1,32 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <script src="Duck.js"></script>
+        <script src="MallardDuck.js"></script>
+        <script src="RubberDuck.js"></script>
+
+        <script>
+                  let mallard = new MallardDuck();
+                  mallard.Display();
+                  mallard.Fly();
+                  mallard.Quack();
+                  mallard.Swim();
+                 
+                  console.log("///////////////////////////////////////////////////");
+
+                  let rubber = new RubberDuck();
+                  rubber.Display();
+                  rubber.Fly();
+                  rubber.Quack();
+                  rubber.Swim();
+
+                  console.log("///////////////////////////////////////////////////");
+                  ////////////////////// Hunting Mode //////////////////////
+                  // I need mallard duck to fly faster, faster by 50% or no fly 
+                  // I need to change the fly behaviour, when this mode is on
+                  mallard.Fly();                    // problem 
+        </script>
+    </body>
+</html>

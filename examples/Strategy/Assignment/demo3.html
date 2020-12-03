@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script src="Person.js"></script>
+    <script src="IPaymentStrategy.js"></script>
+
+    <script>
+        let wife = new Wife();
+        wife.Pay("300$");
+
+        console.log("///////////////////////////////////////////////////");
+
+        let husband = new Husband(new DebitCard());
+
+        console.log("================== Wife is here =================================");
+        husband.Pay("150$");
+
+        console.log("================== Wife is not here =================================");
+        husband.PaymentStrategy = new CreditCard();
+        husband.Pay("50$");
+</script>
+</body>
+
+</html>
