@@ -49,7 +49,6 @@ class CIBLoginSystem {
     }
 }
 
-
 class BankSystemFacade {
     constructor() {
         this.LoginSystem = new CIBLoginSystem();
@@ -74,8 +73,8 @@ class Client {
         this.BankSystemFacade = new BankSystemFacade();
     }
 
-    Transfer(CibAccountCredentials, amount, toBank, toAccountCredentials) {
-        this.BankSystemFacade.Transfer(CibAccountCredentials, amount, toBank, toAccountCredentials)
+    Transfer(CibAccountCredentials, amount, toBank, toAccountId) {
+        this.BankSystemFacade.Transfer(CibAccountCredentials, amount, toBank, toAccountId)
     }
 }
 

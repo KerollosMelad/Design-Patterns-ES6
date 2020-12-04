@@ -1,6 +1,6 @@
 'use strict';
 
-// publisher 
+// publisher - abstact class
 class IWeatherManager {
     constructor() {
     }
@@ -39,14 +39,38 @@ class WeatherManager extends IWeatherManager {
         return this.subjectState;
     }
 
-    UpdateWeatherState(state) {
+    UpdateWeatherState() {
+        let state = this.calc();
+
         this.subjectState = state;
         this.Notify()
     }
+
+
+    ///..calc Weather_Field1....
+    ///..calc Weather_Field2....
+    ///..calc Weather_Field3....
+    ///..calc Weather_Field4....
+    ///..calc Weather_Field5....
+    
+    calc()
+    {
+        //execute
+        ///..calc Weather_Field1....
+        ///..calc Weather_Field2....
+        ///..calc Weather_Field3....
+        ///..calc Weather_Field4....
+        ///..calc Weather_Field5....
+        return 'new weather state: 10 , 30 ';
+    }
 }
 
-// subscriber - Observer 
-class Device {
+
+
+
+
+// subscriber - Observer - interface 
+class IDevice {
     constructor() {
     }
 
@@ -55,7 +79,7 @@ class Device {
 }
 
 // subscriber 1
-class Device1 extends Device {
+class Device1 extends IDevice {
     constructor() {
         super()
         this.observerState = '';
@@ -69,7 +93,7 @@ class Device1 extends Device {
 }
 
 // subscriber 2
-class Device2 extends Device {
+class Device2 extends IDevice {
     constructor() {
         super()
         this.observerState = '';
@@ -82,11 +106,13 @@ class Device2 extends Device {
     }
 }
 
+
+
 function init_Observer() {
     var device1 = new Device1();
     var device2 = new Device2();
     var weather = new WeatherManager();
     weather.Attach(device1);
     weather.Attach(device2);
-    weather.UpdateWeatherState('new weather state: 10 , 30 ');
+    weather.UpdateWeatherState();
 }

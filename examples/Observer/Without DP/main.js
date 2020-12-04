@@ -4,7 +4,26 @@ class WeatherManager {
     constructor() {
     }
 
-    UpdateWeatherState(state) {
+    ///..calc Weather_Field1....
+    ///..calc Weather_Field2....
+    ///..calc Weather_Field3....
+    ///..calc Weather_Field4....
+    ///..calc Weather_Field5....
+    
+    calc()
+    {
+        //execute
+        ///..calc Weather_Field1....
+        ///..calc Weather_Field2....
+        ///..calc Weather_Field3....
+        ///..calc Weather_Field4....
+        ///..calc Weather_Field5....
+        return 'new weather state: 10 , 30 ';
+    }
+
+    UpdateWeatherState() {
+        let state = this.calc();
+
         let dev1 = new Device1();
         let dev2 = new Device2();
 
@@ -37,5 +56,5 @@ class Device2  {
 
 function Run() {
     var weather = new WeatherManager();
-    weather.UpdateWeatherState('new weather state: 10 , 30 ');
+    weather.UpdateWeatherState();
 }

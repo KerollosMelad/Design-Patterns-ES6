@@ -33,7 +33,5 @@ class Duck {
         console.log("Swimming");
     }
 
-    Display() {
-        console.log("I am Duck");
-    }
+    Display() { }
 }

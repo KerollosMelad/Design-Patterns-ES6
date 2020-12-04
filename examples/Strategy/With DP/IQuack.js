@@ -1,3 +1,4 @@
+ //interface
  class IQuack {
      Quack() {};
  }
